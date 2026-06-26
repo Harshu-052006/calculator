@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Mathematical Operators</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        input {
+            width: 200px;
+            padding: 5px;
+            margin-bottom: 10px;
+            background-color:beige;
+            border-radius: 10px;
+            border: 0px;   
+        }
+        button {
+            padding: 10px 15px;
+            margin-right: 5px;
+            border-radius: 10px;
+            border: 0px;
+        }
+        h3 {
+            margin-top: 20px;
+        }
+        .container {
+            background-color:darkgrey;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>JavaScript Mathematical Operators</h1>
+    <div>
+        <p>Enter two numbers and select an operation to perform:</p>
+    </div>
+
+    <input type="number" id="num1" placeholder="Enter first number">
+    <br><br>
+
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br><br>
+
+    <button onclick="calculate('add')">Add</button>
+    <button onclick="calculate('subtract')">Subtract</button>
+    <button onclick="calculate('multiply')">Multiply</button>
+    <button onclick="calculate('divide')">Divide</button>
+
+    <h3 id="result"></h3>
+
+</div>
+
+    <script>
+        function calculate(operation) {
+            
+            let number1 = Number(document.getElementById("num1").value);
+            let number2 = Number(document.getElementById("num2").value);
+            
+            
+            let resultText = "";
+            let calculation = 0;
+
+            
+            if (operation === 'add') {
+                calculation = number1 + number2;
+                resultText = "Sum: " + calculation;
+            } else if (operation === 'subtract') {
+                calculation = number1 - number2;
+                resultText = "Difference: " + calculation;
+            } else if (operation === 'multiply') {
+                calculation = number1 * number2;
+                resultText = "Product: " + calculation;
+            } else if (operation === 'divide') {
+                
+                if (number2 === 0) {
+                    resultText = "Cannot divide by zero!";
+                } else {
+                    calculation = number1 / number2;
+                    resultText = "Quotient: " + calculation;
+                }
+            }
+
+            
+            document.getElementById("result").innerHTML = resultText;
+        }
+    </script>
+
+</body>
+</html>
