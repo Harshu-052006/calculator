@@ -50,7 +50,7 @@ Because this application relies entirely on standard vanilla front-end tech stac
 The single-file architecture ensures high component cohesion and fast rendering speeds:
 
 ```text
-index.html
+calculator.html
  ├── HTML Structure (<div class="calculator">)
  ├── CSS Rulesets (<style> declaration block)
  └── JS Engine Script (<script> behavior logic block)

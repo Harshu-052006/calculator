@@ -29,7 +29,7 @@ function clearDisplay() {
 function calculate() {
     try {
         if (display.value.includes('/0')) {
-            display.value = "Error: Div by 0";
+            display.value = "Error: Division by 0";
             shouldResetDisplay = true;
             return;
         }
